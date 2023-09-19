@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html>
+
+<!-- Head -->
+
+<head>
+
+    <!-- Icon and Title -->
+    <title>GenusDAO</title>
+    <link rel="icon" type="image/x-icon" href="./public/logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
+    <!-- Preload images -->
+    <link rel="preload" as="image" href="./public/genus-header.png">
+    <link rel="preload" as="image" href="./public/genus-logo.svg">
+
+    <!-- Styles -->
+    <style>
+        html {
+            font-family: 'PT Sans', sans-serif;
+            color: black;
+            background-color: #1f1f1f;
+        }
+
+        body {
+            background-color: white;
+            margin: auto;
+            width: 970px;
+            min-height: 100vh;
+        }
+
+        .header {
+            border-bottom: 1px solid #d6d6d6;
+        }
+
+        .header-brand {
+            padding-top: 40px;
+            padding-left: 40px;
+            position: absolute;
+        }
+
+        .header-slogan {
+            margin: 0px;
+            color: #b2beb5;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .header-desc {
+            font-size: 24px;
+            max-width: 400px;
+            margin: 0px;
+            color: #b2beb5;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .header-logo {
+            display: block;
+            height: 70px;
+            margin-bottom: 100px;
+        }
+
+        .header-bg {
+            display: block;
+            width: 100%;
+        }
+
+        .product {
+            width: 825px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-left: 72.5px;
+            padding-right: 72.5px;
+            border-bottom: 1px solid #d6d6d6;
+        }
+
+        .product-body {
+            display: flex;
+            padding-top: 40px;
+        }
+
+        .genome-map-img {
+            display: block;
+        }
+
+        .crispr-search {
+            margin-right: 46px;
+        }
+
+        .crispr-search-img {
+            display: block;
+        }
+
+        .folded-protein-img {
+            display: block;
+        }
+
+        .footer {
+            padding: 20px 20px 0 20px;
+            height: 140px;
+        }
+
+        .footer-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .footer-link {
+            width: 430px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-radius: 9px;
+            border: 1px solid #d6d6d6;
+            color: #007fff;
+        }
+
+        .values {
+            background-image: url(./public/values-bg.svg);
+            display: flex;
+            padding-left: 40px;
+            padding-top: 40px;
+            border-bottom: 1px solid #d6d6d6;
+        }
+
+        .values-section {
+            z-index: 1;
+            margin-right: 40px;
+        }
+
+        .values-item {
+            background-color: white;
+            box-sizing: border-box;
+            padding: 20px;
+            border: 1px solid #d6d6d6;
+            border-radius: 9px;
+            width: 425px;
+            height: 250px;
+            margin-bottom: 40px;
+        }
+    </style>
+
+</head>
+
+<!-- Body -->
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="header-brand">
+            <img class="header-logo" src="./public/genus-logo.svg" />
+            <h1 class="header-slogan">
+                World's genome repository.
+            </h1>
+            <h2 class="header-desc">
+                Community-owned protocol for searching genomic and proteomic data hosted on
+                distributed networks.
+            </h2>
+        </div>
+        <img class="header-bg" src="./public/genus-header.png" />
+    </div>
+
+    <div class="product">
+        <div class="genome-map">
+            <p class="desc">
+                Explore the genome of any species. We are notating every known gene, and their regulatory counterparts.
+            </p>
+            <img class="genome-map-img" src="./public/genome-map.svg" />
+        </div>
+        <div class="product-body">
+            <div class="crispr-search">
+                <p class="desc">Find CRISPR target locations and their scores.</p>
+                <img class="crispr-search-img" src="./public/crispr-search.svg" />
+            </div>
+            <div class="folded-protein">
+                <p class="desc">Explore protein structures and compare different sources.</p>
+                <img class="folded-protein-img" src="./public/folded-protein.png" />
+            </div>
+        </div>
+    </div>
+
+    <div class="values">
+        <div class="values-section">
+            <div class="values-item">
+                <h3>Permissionlessness</h3>
+                <p>
+                    Anyone can participate and have clear path towards being one of the most influential contributors.
+                </p>
+            </div>
+            <div class="values-item">
+                <h3>Decentralisation</h3>
+                <p>
+                    The DAO is run in a decentralised manner. The opinions are weighted by the token holdings and the
+                    reputation of the participant.
+                </p>
+                <p>
+                    We are avoiding using tools and platforms controled by the central entities.
+                </p>
+            </div>
+        </div>
+        <div class="values-section">
+            <div class="values-item">
+                <h3>Transparency</h3>
+                <p>
+                    The structure and inner workings of a DAO are publicaly visible and verifiable.
+                </p>
+            </div>
+            <div class="values-item">
+                <h3>Security</h3>
+                <p>
+                    We are following and promoting the latest security practices.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-section">
+            <a class="footer-link" href="https://twitter.com/genusdao" target="_blank">
+                Twitter &nearr;
+                <img class="footer-icon" src="./public/twitter-icon.svg" />
+            </a>
+
+            <a class="footer-link" href="https://github.com/genusdao" target="_blank">
+                GitHub &nearr;
+                <img class="footer-icon" src="./public/github-icon.svg" />
+            </a>
+        </div>
+        <div class="footer-section">
+            <a class="footer-link" href="#">
+                Discord (Coming Soon) &nearr;
+                <img class="footer-icon" src="./public/discord-icon.svg" />
+            </a>
+
+            <a class="footer-link" href="#">
+                Docs (Coming Soon) &nearr;
+                <img class="footer-icon" src="./public/docs-icon.svg" />
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>
