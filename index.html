@@ -1,252 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
+    <head>
+        <title>GenHub</title>
+        <link rel="icon" type="image/x-icon" href="./public/logo.png" />
 
-<!-- Head -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+            rel="stylesheet"
+        />
 
-<head>
+        <link rel="preload" as="image" href="./public/genhub-header.png" />
+        <link rel="preload" as="image" href="./public/genhub-logo.svg" />
 
-    <!-- Icon and Title -->
-    <title>GenusDAO</title>
-    <link rel="icon" type="image/x-icon" href="./public/logo.png">
+        <style>
+            html {
+                font-family: "PT Sans", sans-serif;
+                background-color: black;
+            }
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+            body {
+                background-color: black;
+                margin: auto;
+                height: 100vh;
+				width: 1361px;
+				border-right: 1px solid #6a747d;
+				border-left: 1px solid #6a747d;
+            }
 
-    <!-- Preload images -->
-    <link rel="preload" as="image" href="./public/genus-header.png">
-    <link rel="preload" as="image" href="./public/genus-logo.svg">
+			.overlay {
+				position: absolute;
+			}
 
-    <!-- Styles -->
-    <style>
-        html {
-            font-family: 'PT Sans', sans-serif;
-            color: black;
-            background-color: #1f1f1f;
-        }
+            .header {
+                width: 450px;
+				padding-left: 40px;
+				padding-top: 40px;
+            }
 
-        body {
-            background-color: white;
-            margin: auto;
-            width: 970px;
-            min-height: 100vh;
-        }
+            .header-slogan {
+                margin: 0px;
+                color: white;
+                padding-left: 10px;
+                margin-bottom: 20px;
+            }
 
-        .header {
-            border-bottom: 1px solid #d6d6d6;
-        }
+            .header-desc {
+                font-size: 24px;
+                margin: 0px;
+                color: white;
+                padding-left: 10px;
+                margin-bottom: 20px;
+            }
 
-        .header-brand {
-            padding-top: 40px;
-            padding-left: 40px;
-            position: absolute;
-        }
+            .header-logo {
+                display: block;
+                height: 70px;
+                margin-bottom: 100px;
+            }
 
-        .header-slogan {
-            margin: 0px;
-            color: #b2beb5;
-            padding-left: 10px;
-            margin-bottom: 20px;
-        }
+			.header-link {
+                width: 400px;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+				margin-right: 20px;
+                border-radius: 9px;
+                border: 1px solid #6a747d;
+                color: #6a747d;
+            }
 
-        .header-desc {
-            font-size: 24px;
-            max-width: 400px;
-            margin: 0px;
-            color: #b2beb5;
-            padding-left: 10px;
-            margin-bottom: 20px;
-        }
+			.header-link:hover {
+				color: white;
+				border: 1px solid white;
+			}
 
-        .header-logo {
-            display: block;
-            height: 70px;
-            margin-bottom: 100px;
-        }
+            .footer {
+				padding-top: 200px;
+                padding-left: 35px;
+                height: 100%;
+				width: 450px;
+            }
 
-        .header-bg {
-            display: block;
-            width: 100%;
-        }
+            .footer-section {
+                display: flex;
+                margin-bottom: 20px;
+            }
 
-        .product {
-            width: 825px;
-            padding-top: 40px;
-            padding-bottom: 40px;
-            padding-left: 72.5px;
-            padding-right: 72.5px;
-            border-bottom: 1px solid #d6d6d6;
-        }
+            .footer-link {
+                width: 430px;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+				margin-right: 20px;
+                border-radius: 9px;
+                border: 1px solid #6a747d;
+                color: #007fff;
+            }
 
-        .product-body {
-            display: flex;
-            padding-top: 40px;
-        }
+			.footer-link:hover {
+				border: 1px solid white;
+			}
 
-        .genome-map-img {
-            display: block;
-        }
+			.footer-link:hover .icon {
+				stroke: white;
+			}
 
-        .crispr-search {
-            margin-right: 46px;
-        }
+			.icon {
+				stroke: #6a747d;
+			}
 
-        .crispr-search-img {
-            display: block;
-        }
+			.bg {
+				display: block;
+				width: 100%;
+            }
+        </style>
+    </head>
 
-        .folded-protein-img {
-            display: block;
-        }
-
-        .footer {
-            padding: 20px 20px 0 20px;
-            height: 140px;
-        }
-
-        .footer-section {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .footer-link {
-            width: 430px;
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            border-radius: 9px;
-            border: 1px solid #d6d6d6;
-            color: #007fff;
-        }
-
-        .values {
-            background-image: url(./public/values-bg.svg);
-            display: flex;
-            padding-left: 40px;
-            padding-top: 40px;
-            border-bottom: 1px solid #d6d6d6;
-        }
-
-        .values-section {
-            z-index: 1;
-            margin-right: 40px;
-        }
-
-        .values-item {
-            background-color: white;
-            box-sizing: border-box;
-            padding: 20px;
-            border: 1px solid #d6d6d6;
-            border-radius: 9px;
-            width: 425px;
-            height: 250px;
-            margin-bottom: 40px;
-        }
-    </style>
-
-</head>
-
-<!-- Body -->
-
-<body>
-
-    <!-- Header -->
-    <div class="header">
-        <div class="header-brand">
-            <img class="header-logo" src="./public/genus-logo.svg" />
-            <h1 class="header-slogan">
-                World's genome repository.
-            </h1>
-            <h2 class="header-desc">
-                Community-owned protocol for searching genomic and proteomic data hosted on
-                distributed networks.
-            </h2>
-        </div>
-        <img class="header-bg" src="./public/genus-header.png" />
-    </div>
-
-    <div class="product">
-        <div class="genome-map">
-            <p class="desc">
-                Explore the genome of any species. We are notating every known gene, and their regulatory counterparts.
-            </p>
-            <img class="genome-map-img" src="./public/genome-map.svg" />
-        </div>
-        <div class="product-body">
-            <div class="crispr-search">
-                <p class="desc">Find CRISPR target locations and their scores.</p>
-                <img class="crispr-search-img" src="./public/crispr-search.svg" />
-            </div>
-            <div class="folded-protein">
-                <p class="desc">Explore protein structures and compare different sources.</p>
-                <img class="folded-protein-img" src="./public/folded-protein.png" />
-            </div>
-        </div>
-    </div>
-
-    <div class="values">
-        <div class="values-section">
-            <div class="values-item">
-                <h3>Permissionlessness</h3>
-                <p>
-                    Anyone can participate and have clear path towards being one of the most influential contributors.
-                </p>
-            </div>
-            <div class="values-item">
-                <h3>Decentralisation</h3>
-                <p>
-                    The DAO is run in a decentralised manner. The opinions are weighted by the token holdings and the
-                    reputation of the participant.
-                </p>
-                <p>
-                    We are avoiding using tools and platforms controled by the central entities.
-                </p>
-            </div>
-        </div>
-        <div class="values-section">
-            <div class="values-item">
-                <h3>Transparency</h3>
-                <p>
-                    The structure and inner workings of a DAO are publicaly visible and verifiable.
-                </p>
-            </div>
-            <div class="values-item">
-                <h3>Security</h3>
-                <p>
-                    We are following and promoting the latest security practices.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="footer-section">
-            <a class="footer-link" href="https://twitter.com/genusdao" target="_blank">
-                Twitter &nearr;
-                <img class="footer-icon" src="./public/twitter-icon.svg" />
-            </a>
-
-            <a class="footer-link" href="https://github.com/genusdao" target="_blank">
-                GitHub &nearr;
-                <img class="footer-icon" src="./public/github-icon.svg" />
-            </a>
-        </div>
-        <div class="footer-section">
-            <a class="footer-link" href="#">
-                Discord (Coming Soon) &nearr;
-                <img class="footer-icon" src="./public/discord-icon.svg" />
-            </a>
-
-            <a class="footer-link" href="#">
-                Docs (Coming Soon) &nearr;
-                <img class="footer-icon" src="./public/docs-icon.svg" />
-            </a>
-        </div>
-    </div>
-
-</body>
-
+    <body>
+		<div class="overlay">
+			<div class="header">
+				<img class="header-logo" src="./public/genhub-logo.svg" />
+				<h1 class="header-slogan">We are making a virtual cell.</h1>
+				<h2 class="header-desc">
+					Our mission is to build computer models of a cell using AI to better understand biology.
+				</h2>
+				<div class="header-section">
+					<a
+					class="header-link"
+					href="mission.html"
+					target="_blank"
+				>
+					Learn more &nearr;
+				</a>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footer-section">
+					<a
+						class="footer-link"
+						href="https://twitter.com/genhub"
+						target="_blank"
+					>
+						Twitter &nearr;
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path class="icon" d="M23 3C22.0424 3.67548 20.9821 4.19211 19.86 4.53C19.2577 3.83751 18.4573 3.34669 17.567 3.12393C16.6767 2.90116 15.7395 2.9572 14.8821 3.28445C14.0247 3.61171 13.2884 4.1944 12.773 4.95372C12.2575 5.71303 11.9877 6.61234 12 7.53V8.53C10.2426 8.57557 8.50127 8.18581 6.93101 7.39545C5.36074 6.60508 4.01032 5.43864 3 4C3 4 -1 13 8 17C5.94053 18.398 3.48716 19.0989 1 19C10 24 21 19 21 7.5C20.9991 7.22145 20.9723 6.94359 20.92 6.67C21.9406 5.66349 22.6608 4.39271 23 3Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						
+					</a>
+	
+					<a
+						class="footer-link"
+						href="https://github.com/genhub-xyz"
+						target="_blank"
+					>
+						GitHub &nearr;
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path class="icon" d="M9 19.0268C4 20.5268 4 16.5268 2 16.0268M16 22.0268V18.1568C16.0375 17.68 15.9731 17.2006 15.811 16.7506C15.6489 16.3006 15.3929 15.8902 15.06 15.5468C18.2 15.1968 21.5 14.0068 21.5 8.54679C21.4997 7.15062 20.9627 5.80799 20 4.79679C20.4559 3.5753 20.4236 2.22514 19.91 1.02679C19.91 1.02679 18.73 0.676793 16 2.50679C13.708 1.88561 11.292 1.88561 9 2.50679C6.27 0.676793 5.09 1.02679 5.09 1.02679C4.57638 2.22514 4.54414 3.5753 5 4.79679C4.03013 5.81549 3.49252 7.17026 3.5 8.57679C3.5 13.9968 6.8 15.1868 9.94 15.5768C9.611 15.9168 9.35726 16.3222 9.19531 16.7667C9.03335 17.2112 8.96681 17.6849 9 18.1568V22.0268" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+		<img class="bg" src="./public/genhub-header.png" />
+    </body>
 </html>

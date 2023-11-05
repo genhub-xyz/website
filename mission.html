@@ -1,0 +1,199 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>GenHub - Mission</title>
+        <link rel="icon" type="image/x-icon" href="./public/logo.png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            html {
+                font-family: "PT Sans", sans-serif;
+                background-color: black;
+            }
+
+            body {
+                background-color: black;
+                margin: auto;
+				width: 970px;
+				border-right: 1px solid #6a747d;
+				border-left: 1px solid #6a747d;
+            }
+
+			.header {
+				border-bottom: 1px solid #6a747d;
+				padding: 20px;
+			}
+
+			.logo {
+				height: 40px;
+			}
+
+			.title {
+				border-bottom: 1px solid #6a747d;
+			}
+
+			.title-h1 {
+				position: absolute;
+				color: white;
+				font-size: 56px;
+				margin-top: 110px;
+				margin-left: 40px;
+			}
+
+			.title-bg {
+				display: block;
+				width: 100%;
+			}
+
+			.content {
+				color: white;
+				padding: 60px 0;
+				font-size: 22px;
+			}
+
+			.content-p {
+				padding: 0 140px;
+			}
+
+			.content-s {
+				padding: 0 140px;
+				font-size: 12px;
+				text-align: center;
+			}
+
+			.illustration {
+				margin: 20px 80px;
+				padding: 20px;
+				border-radius: 9px;
+				border: 1px solid #6a747d;
+			}
+
+			.illustration-img {
+				height: 373px;
+			}
+
+			.footer {
+                padding-left: 35px;
+				padding-bottom: 20px;
+				width: 450px;
+            }
+
+            .footer-section {
+                display: flex;
+                margin-bottom: 20px;
+            }
+
+            .footer-link {
+                width: 430px;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+				margin-right: 20px;
+                border-radius: 9px;
+                border: 1px solid #6a747d;
+                color: #007fff;
+            }
+
+			.footer-link:hover {
+				border: 1px solid white;
+			}
+
+			.footer-link:hover .icon {
+				stroke: white;
+			}
+
+			.icon {
+				stroke: #6a747d;
+			}
+        </style>
+    </head>
+
+    <body>
+		<div class="header">
+			<a
+						class="header-link"
+						href="index.html"
+						target="_blank"
+					>
+					<img class="logo" src="./public/genhub-logo.svg" />
+				</a>
+		</div>
+		<div class="title">
+			<h1 class="title-h1">Out mission</h1>
+			<img class="title-bg" src="./public/mission-header.png" />
+		</div>
+		<div class="content">
+			<p class="content-p">
+				Biology presents itself as one of the hardest problems humanity needs to solve to secure it's future on this planet.
+				It is our only sustainable solution for problems like climate change, health, production,
+				and colonisation of outer space.
+			</p>
+
+			<p class="content-p">
+				At its core, biology can be viewed as a form of molecular nanotechnology,
+				optimised by the evolutinary algorithm over billions of years, which resulted in overwhelming amount of complexity.
+			</p>
+
+			<p class="content-p">
+				Biological systems are a product of optimisation algorithm. There are relatively simple rules on how biology works,
+				but the systems that emerge from these rules are unimagabely complex, and it is very hard to understand them with the
+				top-down approach, by observing their behaviour and trying to define the primitives that created these behaviours.
+				The solution is to, first agree on what are the underlying rules, and then simulate (in silico) the same process that is
+				done in nature. The more precise/detailed the simulations, the better. But we don't have enough computational resources
+				today, to simulate nature on the quantum level, or even atomic level, so we have to find ways to approximate them.
+				Which leads us to why we are starting GenHub.
+			</p>
+
+			<div class="illustration">
+				<img class="illustration-img" src="./public/cell-simulation.svg" />
+			</div>
+			<p class="content-s">Illustration of a cell simulator.</p>
+
+			<p class="content-p">
+				We want to use the cutting-edge AI technices to simulate biological cells (with humans cells being our endgame).
+				We are a non-profit organisation, and this is our 10-year goal. We believe this is the right time to start working on this
+				problem, due to recent advancements in the field of AI, specifivaly with successes of models like AlphaFold and ESMFold,
+				which created massive amounts of data about protein and molecular structures withing the cell.
+				We want to analyse these structures to understand their interconnectedness, in the huge blob of mess that is a biological cell.
+			</p>
+
+			<p class="content-p">
+				We are laser-focused on this mission, and we believe that, if we succeed,
+				the upsides are going to be huge for biotech, pharma idustry, and humanity as a whole.
+			</p>
+		</div>
+		<div class="footer">
+			<div class="footer-section">
+				<a
+					class="footer-link"
+					href="https://twitter.com/genhub"
+					target="_blank"
+				>
+					Twitter &nearr;
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path class="icon" d="M23 3C22.0424 3.67548 20.9821 4.19211 19.86 4.53C19.2577 3.83751 18.4573 3.34669 17.567 3.12393C16.6767 2.90116 15.7395 2.9572 14.8821 3.28445C14.0247 3.61171 13.2884 4.1944 12.773 4.95372C12.2575 5.71303 11.9877 6.61234 12 7.53V8.53C10.2426 8.57557 8.50127 8.18581 6.93101 7.39545C5.36074 6.60508 4.01032 5.43864 3 4C3 4 -1 13 8 17C5.94053 18.398 3.48716 19.0989 1 19C10 24 21 19 21 7.5C20.9991 7.22145 20.9723 6.94359 20.92 6.67C21.9406 5.66349 22.6608 4.39271 23 3Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					
+				</a>
+
+				<a
+					class="footer-link"
+					href="https://github.com/genhub-xyz"
+					target="_blank"
+				>
+					GitHub &nearr;
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path class="icon" d="M9 19.0268C4 20.5268 4 16.5268 2 16.0268M16 22.0268V18.1568C16.0375 17.68 15.9731 17.2006 15.811 16.7506C15.6489 16.3006 15.3929 15.8902 15.06 15.5468C18.2 15.1968 21.5 14.0068 21.5 8.54679C21.4997 7.15062 20.9627 5.80799 20 4.79679C20.4559 3.5753 20.4236 2.22514 19.91 1.02679C19.91 1.02679 18.73 0.676793 16 2.50679C13.708 1.88561 11.292 1.88561 9 2.50679C6.27 0.676793 5.09 1.02679 5.09 1.02679C4.57638 2.22514 4.54414 3.5753 5 4.79679C4.03013 5.81549 3.49252 7.17026 3.5 8.57679C3.5 13.9968 6.8 15.1868 9.94 15.5768C9.611 15.9168 9.35726 16.3222 9.19531 16.7667C9.03335 17.2112 8.96681 17.6849 9 18.1568V22.0268" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+    </body>
+</html>
